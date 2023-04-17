@@ -6,6 +6,7 @@ import org.junit.Test;
 import static org.mockito.Mockito.*;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.interfaces.TrainController;
+import static org.junit.Assert.*;
 
 
 public class TrainSensorTest {
@@ -42,5 +43,10 @@ public class TrainSensorTest {
     public void TestRelativeBelow() {
         trainSensorIml.overrideSpeedLimit(-50);
         verify(mockTrainUser, times(1)).setAlarmState(true);
+    }
+
+    @Test
+    public void TestSpeedLimit() {
+        assertEquals(trainSensorIml.getSpeedLimit(), 5);
     }
 }
