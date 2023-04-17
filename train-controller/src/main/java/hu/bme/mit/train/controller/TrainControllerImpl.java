@@ -13,6 +13,16 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 0;
 	private boolean speedBoostActive;
 
+	public TrainControllerImpl() {
+		while(true) {
+			try {
+				followSpeed();
+				Thread.sleep(2000);
+			}
+			catch (InterruptedException error){}
+		}
+	}
+
 	@Override
 	public void followSpeed() {
 		if (referenceSpeed < 0) {
