@@ -4,7 +4,10 @@
 	<groupId>hu.bme.mit.train</groupId>
 	<artifactId>hu.bme.mit.train.sensor</artifactId>
 	<version>0.5.0-SNAPSHOT</version>
-
+<properties>
+  <sonar.organization>boapps</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
     <parent>
         <artifactId>hu.bme.mit.train</artifactId>
         <groupId>hu.bme.mit.train</groupId>
