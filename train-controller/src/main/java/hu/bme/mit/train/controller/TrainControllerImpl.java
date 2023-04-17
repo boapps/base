@@ -14,13 +14,18 @@ public class TrainControllerImpl implements TrainController {
 	private boolean speedBoostActive;
 
 	public TrainControllerImpl() {
-		while(true) {
-			try {
-				followSpeed();
-				Thread.sleep(2000);
+		Thread thread = new Thread(){
+			public void run() {
+			while(true) {
+				try {
+					followSpeed();
+					Thread.sleep(2000);
+				} catch (InterruptedException error){
+
+				}
 			}
-			catch (InterruptedException error){}
 		}
+		};
 	}
 
 	@Override
