@@ -12,4 +12,7 @@ public interface TrainUser {
 
 	void overrideSpeedBoostActive(boolean speedBoostActive);
 
+	boolean getAlarmState(); 
+
+	void setAlarmState(boolean alarmState); 
 }
